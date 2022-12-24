@@ -1,3 +1,7 @@
 import mongoose from "mongoose";
+mongoose.set("strictQuery", false);
+import * as dotenv from "dotenv";
 
-export default mongoose.connect("");
+dotenv.config();
+
+export default mongoose.connect(process.env.MONGOURL);
